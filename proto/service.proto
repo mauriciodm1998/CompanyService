@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package teste;
+
+option go_package = "/pb";
+
+message Company {
+    string Id = 1;
+    string Name = 2;
+}
+
+message Id {
+    string Id = 1;
+}
+
+service CompanyServer {
+    rpc Get (Id) returns (Company) {};
+} 
